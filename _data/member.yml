@@ -52,24 +52,17 @@
     link_label:
       zh: 邮箱
       en: Email
-- id: huijie-lian
+- id: jingyan-chen
   name:
-    zh: 连慧婕 / Hui-Jie Lian
-    en: Hui-Jie Lian / 连慧婕
+    zh: 陈静妍 / JingY-an Chen 
+    en: JingY-an Chen  / 陈静妍
   role:
     zh: 博士生
     en: PhD Student
   bio:
-    zh: 研究方向：凝聚态理论计算、低维磁性，拓扑，铁电材料
-    en: Research interests include theoretical and computational condensed matter physics, low-dimensional magnetism, topology, and ferroelectric materials.
-  photo: /assets/images/lianhuijie.webp
-  links:
-  - url:
-      zh: mailto:230259170@seu.edu.cn
-      en: mailto:230259170@seu.edu.cn
-    link_label:
-      zh: 邮箱
-      en: Email
+    zh: 研究方向：机器学习辅助量子材料设计以及多铁材料
+    en: Research interests include AI/ML-assisted quantum materials discovery and multiferroicity.
+  photo: https://jingyanchen730.github.io/jychen-homepage-new/images/picture.jpg
   links:
   - url:
       zh: https://jingyanchen730.github.io/jychen-homepage-new/
