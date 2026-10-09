@@ -47,11 +47,11 @@
   photo: /assets/images/lianhuijie.webp
   links:
   - url:
-      zh: mailto:230259170@seu.edu.cn
-      en: mailto:230259170@seu.edu.cn
+      zh: https://huijie-lian.github.io/homepage/zh/
+      en: https://huijie-lian.github.io/homepage/en/
     link_label:
-      zh: 邮箱
-      en: Email
+      zh: 查看详情
+      en: Website
 - id: jingyan-chen
   name:
     zh: 陈静妍 / Jing-Yan Chen 
