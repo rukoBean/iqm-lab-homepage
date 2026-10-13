@@ -16,6 +16,10 @@
     link_label:
       zh: 查看详情
       en: View profile
+  - url: "mailto:lflin@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email
 - id: ming-an
   name:
     zh: 安明 / Ming An
@@ -28,9 +32,7 @@
     en: Research interests include theoretical and computational condensed matter physics, novel quantum effects in low-dimensional systems, and the design of multifunctional materials with ferromagnetic and ferroelectric properties.
   photo: /assets/images/anming.webp
   links:
-  - url:
-      zh: http://physics.seu.edu.cn/2023/1116/c29635a472414/page.htm
-      en: http://physics.seu.edu.cn/2023/1116/c29635a472414/page.htm
+  - url: "http://physics.seu.edu.cn/2023/1116/c29635a472414/page.htm"
     link_label:
       zh: 查看详情
       en: View profile
@@ -50,12 +52,16 @@
       zh: https://huijie-lian.github.io/homepage/zh/
       en: https://huijie-lian.github.io/homepage/en/
     link_label:
-      zh: 查看详情
+      zh: 个人主页
       en: Website
+  - url: "mailto:hjlian@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email
 - id: jingyan-chen
   name:
     zh: 陈静妍 / Jing-Yan Chen 
-    en: Jing-Yan Chen  / 陈静妍
+    en: Jing-Yan Chen / 陈静妍
   role:
     zh: 博士生
     en: PhD Student
@@ -64,9 +70,31 @@
     en: Research interests include AI/ML-assisted quantum materials discovery and multiferroicity.
   photo: https://jingyanchen730.github.io/jychen-homepage-new/images/picture.jpg
   links:
-  - url:
-      zh: https://jingyanchen730.github.io/jychen-homepage-new/
-      en: https://jingyanchen730.github.io/jychen-homepage-new/
+  - url: "https://jingyanchen730.github.io/jychen-homepage-new/"
     link_label:
-      zh: 查看详情
+      zh: 个人主页
       en: Website
+  - url: "mailto:jychen57@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email
+- id: yao-lu
+  name:
+    zh: 陆瑶 / Yao Lu
+    en: Yao Lu / 陆瑶
+  role:
+    zh: 硕士生
+    en: master Student
+  bio:
+    zh: 研究方向：二维磁性，多铁材料
+    en: Research interests include 2D magnetic materials and multiferroicity.
+  photo: https://hobolu.com/images/aboutme/me.webp
+  links:
+  - url: "https://rukobean.github.io/ylu/"
+    link_label:
+      zh: 个人主页
+      en: Website (in Chinese)
+  - url: "mailto:220232408@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email

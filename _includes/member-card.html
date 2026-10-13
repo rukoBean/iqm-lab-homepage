@@ -8,7 +8,10 @@
         {% if member.links.size > 0 %}
         <p class="member-links">
           {% for link in member.links %}
+          {% assign member_url = link.url %}
+          {% if link.url.zh or link.url.en %}
           {% assign member_url = link.url[page.lang] %}
+          {% endif %}
           {% assign first_char = member_url | slice: 0 %}
           {% if first_char == '/' %}{% assign member_url = member_url | relative_url %}{% endif %}
           <a class="text-link" href="{{ member_url | escape }}">{{ link.link_label[page.lang] | escape }}</a>

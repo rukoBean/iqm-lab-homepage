@@ -4,6 +4,7 @@ email: lflin@seu.edu.cn
 google_scholar: https://scholar.google.com/citations?user=bvLzblkAAAAJ
 url: https://iqmlab.org
 baseurl: ''
+favicon: /assets/favicon.svg
 sass:
   style: compressed
 asset_version: 20260923navbg
