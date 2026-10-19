@@ -1,0 +1,22 @@
+<section class="member-album" aria-labelledby="member-album-heading" data-member-album>
+  <div class="album-header">
+    <h2 id="member-album-heading">{{ site.data.i18n.member_album[page.lang] }}</h2>
+    <button class="album-toggle" type="button" hidden
+      data-pause-label="{{ site.data.i18n.album_pause[page.lang] | escape }}"
+      data-play-label="{{ site.data.i18n.album_play[page.lang] | escape }}">{{ site.data.i18n.album_pause[page.lang] }}</button>
+  </div>
+  {% if site.data.album.size > 0 %}
+  <div class="album-scroll" tabindex="0" role="region" aria-labelledby="member-album-heading">
+    <div class="album-track">
+      {% for photo in site.data.album %}
+      <figure class="album-photo">
+        <img src="{{ photo.image | relative_url }}" alt="{{ photo.subtitle[page.lang] | escape }}" loading="lazy" width="640" height="480">
+        <figcaption>{{ photo.subtitle[page.lang] | escape }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <p class="muted album-empty">{{ site.data.i18n.member_album_empty[page.lang] }}</p>
+  {% endif %}
+</section>

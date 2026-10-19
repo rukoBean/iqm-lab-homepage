@@ -25,3 +25,15 @@ missing_pdf:
 back_member:
   zh: 返回成员页
   en: Back to Member
+member_album:
+  zh: 组员活动相册
+  en: Member Activities
+member_album_empty:
+  zh: 组员活动照片即将更新。
+  en: Photos of member activities are coming soon.
+album_pause:
+  zh: 暂停滚动
+  en: Pause scrolling
+album_play:
+  zh: 继续滚动
+  en: Resume scrolling

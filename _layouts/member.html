@@ -7,4 +7,6 @@ layout: default
   <section>
     <div class="grid two"><div class="card"><h3>{{ page.cta_heading }}</h3><p>{{ page.cta_text }}</p><a class="button" href="{{ page.cta_path | relative_url }}">{{ page.cta_label }}</a></div></div>
   </section>
+  {% include member-album.html %}
 </main>
+<script src="{{ '/assets/member-album.js' | relative_url }}?v={{ site.asset_version }}" defer></script>
