@@ -29,13 +29,16 @@
     if (mobile.matches && event.target.closest('a')) setOpen(false);
   });
 
-  mobile.addEventListener('change', () => {
+  function syncViewport() {
     const focused = document.activeElement;
+    toggle.hidden = !mobile.matches;
     setOpen(false);
     if (mobile.matches && links.contains(focused)) toggle.focus();
     if (!mobile.matches && focused === toggle) nav.querySelector('.brand').focus();
-  });
+  }
 
-  toggle.hidden = false;
+  mobile.addEventListener('change', syncViewport);
+
   nav.classList.add('nav--collapsible');
+  syncViewport();
 })();
