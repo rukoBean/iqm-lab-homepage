@@ -5,7 +5,7 @@ layout: default
   {% include page-title.html %}
   <section>
     <div class="timeline">
-{% for item in site.data.news %}{% include news-item.html item=item %}{% endfor %}
+{% for item in site.data.news reversed %}{% include news-item.html item=item %}{% endfor %}
 </div>
 </section>
 </main>

@@ -1,12 +1,31 @@
 {% assign prefix = '/' %}
 {% assign other_prefix = '/en/' %}
 {% if page.lang == 'en' %}{% assign prefix = '/en/' %}{% assign other_prefix = '/' %}{% endif %}
+{% assign language_switch_path = other_prefix | append: page.translation_path %}
+{% if page.layout == 'news-post' %}
+  {% assign other_news_lang = 'en' %}
+  {% assign other_news_folder = 'news/en/' %}
+  {% if page.lang == 'en' %}
+    {% assign other_news_lang = 'zh' %}
+    {% assign other_news_folder = 'news/' %}
+  {% endif %}
+  {% assign translated_news_source = other_news_folder | append: page.name %}
+  {% assign translated_news_page = site.pages | where: 'path', translated_news_source | where: 'lang', other_news_lang | first %}
+  {% assign language_switch_path = other_prefix | append: 'news.html' %}
+  {% if translated_news_page %}{% assign language_switch_path = translated_news_page.url %}{% endif %}
+{% endif %}
 <div class="topbar"><nav class="nav">
   <a class="brand" href="{{ prefix | relative_url }}"><img class="logo-mark" src="{{ '/assets/logo-transparent.png' | relative_url }}" alt="{{ site.data.i18n.logo_alt[page.lang] | escape }}"></a>
-  <div class="navlinks">
+  <button class="nav-toggle" type="button" aria-controls="navigation-links" aria-expanded="false" aria-label="{{ site.data.i18n.open_menu[page.lang] | escape }}" data-open-label="{{ site.data.i18n.open_menu[page.lang] | escape }}" data-close-label="{{ site.data.i18n.close_menu[page.lang] | escape }}" hidden>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+      <path class="nav-toggle-menu" d="M4 6h16M4 12h16M4 18h16" />
+      <path class="nav-toggle-close" d="M6 6l12 12M6 18L18 6" />
+    </svg>
+  </button>
+  <div class="navlinks" id="navigation-links">
     {% for item in site.data.navigation %}
     <a{% if page.nav_id == item.id %} class="active" aria-current="page"{% endif %} href="{{ prefix | append: item.path | relative_url }}">{{ item.label[page.lang] }}</a>
     {% endfor %}
-    <a class="lang" href="{{ other_prefix | append: page.translation_path | relative_url }}">{{ site.data.i18n.switch_language[page.lang] }}</a>
+    <a class="lang" href="{{ language_switch_path | relative_url | escape }}">{{ site.data.i18n.switch_language[page.lang] }}</a>
   </div>
 </nav></div>

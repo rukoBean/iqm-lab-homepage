@@ -10,12 +10,24 @@ footer:
 switch_language:
   zh: EN
   en: 中文
+open_menu:
+  zh: 打开导航菜单
+  en: Open navigation menu
+close_menu:
+  zh: 关闭导航菜单
+  en: Close navigation menu
 news:
   zh: 新闻动态
   en: News
 all_news:
   zh: 查看全部新闻动态
   en: View all news
+read_news:
+  zh: 查看详情
+  en: Read more
+back_news:
+  zh: 返回新闻动态
+  en: Back to news
 featured:
   zh: ★ 代表性论文
   en: ★ Featured

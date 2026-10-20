@@ -1,26 +1,32 @@
 - id: news-1
+  date: ""
+  pin: true
   label:
-    zh: 2026 · 论文发表
-    en: 2026 · Publication
+    zh: 联系
+    en: Contact
   title:
-    zh: 祝贺课题组与吕冰教授合作论文发表于 PRL
-    en: Congratulations on our collaborative PRL publication with Prof. Bing Lv
+    zh: 申请方式
+    en: How to apply
   body:
-    zh: 祝贺林玲芳教授与德州大学达拉斯分校吕冰教授合作论文 [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t) 发表于 *Physical Review Letters*。
-    en: Congratulations to Prof. Lingfang Lin and Prof. Bing Lv at The University of Texas at Dallas on their collaborative paper [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t), published in *Physical Review Letters*.
+    zh: 请发送 CV 和简短研究兴趣说明至 [SITE_EMAIL](mailto:SITE_EMAIL)。
+    en: Please send a CV and a brief statement of research interests to [SITE_EMAIL](mailto:SITE_EMAIL).
   homepage: true
 - id: news-2
+  date: ""
+  pin: true
   label:
-    zh: 2026 · 招生
-    en: 2026 · Recruiting
+    zh: 科研训练
+    en: Research Training
   title:
-    zh: 智能量子材料课题组欢迎新成员加入
-    en: IQM Lab welcomes new members
+    zh: 本科生科研训练开放咨询
+    en: Undergraduate research training inquiries are welcome
   body:
-    zh: 欢迎对凝聚态理论、计算材料、AI/ML for materials 感兴趣的博士后、博士生、硕士生和本科生联系。
-    en: Postdoctoral researchers, PhD students, master students, and undergraduate researchers interested in condensed matter theory, computational materials, and AI/ML for materials are welcome to contact us.
+    zh: 欢迎具备物理、材料、计算或编程兴趣的本科生参与文献阅读、计算流程和数据分析训练。
+    en: Undergraduates with interests in physics, materials science, computing, or programming are welcome to join literature reading, computational workflow, and data-analysis training.
   homepage: true
 - id: news-3
+  date: ""
+  pin: false
   label:
     zh: 方向亮点
     en: Research Highlight
@@ -32,24 +38,41 @@
     en: We develop physics-informed machine-learning methods and combine them with first-principles calculations and many-body models to explore novel superconducting, magnetic, and multiferroic materials.
   homepage: true
 - id: news-4
+  date: ""
+  pin: true
   label:
-    zh: 科研训练
-    en: Research Training
+    zh: 2026 · 招生
+    en: 2026 · Recruiting
   title:
-    zh: 本科生科研训练开放咨询
-    en: Undergraduate research training inquiries are welcome
+    zh: 智能量子材料课题组欢迎新成员加入
+    en: IQM Lab welcomes new members
   body:
-    zh: 欢迎具备物理、材料、计算或编程兴趣的本科生参与文献阅读、计算流程和数据分析训练。
-    en: Undergraduates with interests in physics, materials science, computing, or programming are welcome to join literature reading, computational workflow, and data-analysis training.
+    zh: 欢迎对凝聚态理论、计算材料、AI/ML for materials 感兴趣的博士后、博士生、硕士生和本科生联系。
+    en: Postdoctoral researchers, PhD students, master students, and undergraduate researchers interested in condensed matter theory, computational materials, and AI/ML for materials are welcome to contact us.
   homepage: true
 - id: news-5
+  date: ""
+  pin: false
   label:
-    zh: 联系
-    en: Contact
+    zh: 2026 · 论文发表
+    en: 2026 · Publication
   title:
-    zh: 申请方式
-    en: How to apply
+    zh: 祝贺课题组与吕冰教授合作论文发表于 PRL
+    en: Congratulations on our collaborative PRL publication with Prof. Bing Lv
   body:
-    zh: 请发送 CV 和简短研究兴趣说明至 [SITE_EMAIL](mailto:SITE_EMAIL)。
-    en: Please send a CV and a brief statement of research interests to [SITE_EMAIL](mailto:SITE_EMAIL).
+    zh: 祝贺林玲芳教授与德州大学达拉斯分校吕冰教授合作论文 [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t) 发表于 *Physical Review Letters*。
+    en: Congratulations to Prof. Lingfang Lin and Prof. Bing Lv at The University of Texas at Dallas on their collaborative paper [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t), published in *Physical Review Letters*.
+  homepage: true
+- id: news-6
+  date: ""
+  pin: false
+  label:
+    zh: 2026 · 荣誉奖项
+    en: 2026 · Honors and Awards
+  title:
+    zh: 祝贺课题组博士生陈静妍荣获博士新生奖
+    en: Congratulations to our PhD student Jing-Yan Chen on receiving the New Doctoral Student Award
+  body:
+    zh: 祝贺课题组一年级博士生陈静妍荣获东南大学物理学院2026级博士新生奖！详情请见[获奖名单公示](https://physics.seu.edu.cn/2026/1020/c23142a586756/page.htm)。
+    en: Congratulations to our junior PhD student Jing-Yan Chen on receiving the New Doctoral Student Award for the 2026 entering cohort from the School of Physics at Southeast University! Please see the [award announcement](https://physics.seu.edu.cn/2026/1020/c23142a586756/page.htm) for details.
   homepage: true

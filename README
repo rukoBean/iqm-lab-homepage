@@ -31,6 +31,7 @@ Page bodies are still one file per language:
 | --- | --- | --- |
 | Profile prose | `lingfang-lin.md` | `en/lingfang-lin.md` |
 | Contact prose | `contact.md` | `en/contact.md` |
+| Detailed news articles | `news/<slug>.md` | `news/en/<slug>.md` |
 | Homepage introduction | `index.html` | `en/index.html` |
 
 Publications are shared in `_data/publications.yml`; PDF files live in `pdfs/`.
@@ -47,16 +48,18 @@ title:
   en: English title
 ```
 
-Values that do not vary by language — `id`, `homepage`, `photo`, the `methods`
+Values that do not vary by language — `id`, `homepage`, `pin`, `photo`, the `methods`
 list — stay plain scalars. Both languages of an item sit next to each other, so
 they are edited in one place and cannot drift apart.
 
 ## Add news
 
-Copy an entry into `_data/news.yml`:
+Append an entry to the bottom of `_data/news.yml`:
 
 ```yaml
 - id: new-publication-2026
+  date: "2026-10-20"
+  pin: false
   label:
     zh: 2026 · 论文发表
     en: 2026 · Publication
@@ -72,12 +75,72 @@ Copy an entry into `_data/news.yml`:
   homepage: true
 ```
 
-Items appear in file order; put the newest first. Use a unique `id` per item.
-`label` is optional and takes precedence over `date`; dates should be quoted and
-stay a plain scalar. `body` and `summary` support Markdown. If `summary` is
+Items appear in reverse file order; append the newest at the bottom. Use a unique
+`id` per item. The full news page shows all entries in this order.
+
+The homepage panel considers only entries with `homepage: true`. Set `pin: true`
+to keep an entry in the panel; `pin: false` or an omitted `pin` leaves it unpinned.
+With fewer than five pinned entries, the panel fills the remaining slots with
+the newest unpinned entries, up to five entries total. With five or more pinned
+entries, it shows all pinned entries only. Selected entries always appear in
+reverse file order; pinning affects inclusion, not display order.
+
+`date` is shared by both languages. Use a quoted `YYYY-MM-DD` value such as
+`date: "2026-10-20"`, or `date: ""` when the announcement date is unknown.
+The full news page displays it at the top right of the card, opposite the
+optional `label`; an empty or omitted date is hidden. The homepage keeps its
+compact layout, showing `label` with `date` as a fallback when no label exists.
+Dates do not affect display order.
+
+`body` and `summary` support Markdown. If `summary` is
 omitted, the homepage uses `body`. Set `homepage: false` to show an entry only on
 the full news page. `SITE_EMAIL` in news text is replaced with the email from
 `_config.yml`.
+
+### Add a detailed news article
+
+Optionally add `news-post` to a news entry. Its value is the article's filename
+without `.md`, not its displayed title:
+
+```yaml
+  news-post: doctoral-student-award
+```
+
+Create `news/doctoral-student-award.md` with YAML front matter and Markdown:
+
+```markdown
+---
+layout: news-post
+lang: zh
+title: 祝贺陈静妍荣获博士新生奖
+description: 陈静妍荣获东南大学物理学院2026级博士新生奖。
+nav_id: news
+permalink: /news/doctoral-student-award.html
+---
+
+在这里撰写详细新闻内容，支持 **粗体**、链接和图片。
+
+## 详情
+
+更多新闻内容……
+```
+
+The Chinese news card gains a **查看详情** link only when the matching file exists
+and has `lang: zh`. Entries without `news-post`, or referencing a missing file,
+have no detail link. Homepage cards keep their compact summary format.
+
+For an English translation, create `news/en/doctoral-student-award.md` with the
+same filename, `layout: news-post`, `lang: en`, `nav_id: news`, English text and
+metadata, and `permalink: /en/news/doctoral-student-award.html`. English cards
+show **Read more** only when this English file exists; they never link to the
+Chinese article as a fallback. All article source files stay inside `news/`.
+
+The article layout uses `title` for its heading unless an optional `heading`
+is provided; `intro` is also optional. It adds a localized link back to the news
+listing. The language switch finds the matching article automatically, or links
+to the other language's news listing if no translation exists. News articles
+do not need `translation_path`. Use `relative_url` for local image/link URLs in
+article content, for example `![合影]({{ '/assets/images/group-photo.webp' | relative_url }})`.
 
 ## Add a member
 
@@ -158,7 +221,8 @@ a bilingual placeholder. Without JavaScript, photos remain manually scrollable.
   a `zh:` / `en:` pair and read as `site.data.i18n.<key>[page.lang]`.
 - `assets/style.scss`: appearance; `assets/ai-bg.js`: background animation.
 
-Every page has `lang`, `nav_id`, and `translation_path` in front matter.
+Pages have `lang`, `nav_id`, and `translation_path` in front matter (news
+articles resolve their language-switch destination automatically, as above).
 `translation_path` is the filename relative to the language root (empty for
 home); it lets the language switch link to the matching page. `nav_id` matches
 an ID in `_data/navigation.yml` and controls the active menu item.

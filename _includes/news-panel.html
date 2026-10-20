@@ -1,8 +1,18 @@
 {% assign news_path = '/news.html' %}{% if page.lang == 'en' %}{% assign news_path = '/en/news.html' %}{% endif %}
+{% assign homepage_news = site.data.news | where: 'homepage', true | reverse %}
+{% assign pinned_count = homepage_news | where: 'pin', true | size %}
+{% assign remaining_slots = 5 | minus: pinned_count %}
 <aside class="news-panel">
   <h2><a class="panel-title-link" href="{{ news_path | relative_url }}">{{ site.data.i18n.news[page.lang] }}</a></h2>
   <div class="news-scroll"><div class="news-list">
-    {% for item in site.data.news %}{% if item.homepage %}{% include news-item.html item=item compact=true %}{% endif %}{% endfor %}
+    {% for item in homepage_news %}
+      {% if item.pin == true %}
+        {% include news-item.html item=item compact=true %}
+      {% elsif remaining_slots > 0 %}
+        {% include news-item.html item=item compact=true %}
+        {% assign remaining_slots = remaining_slots | minus: 1 %}
+      {% endif %}
+    {% endfor %}
   </div></div>
   <div class="news-more"><a class="button secondary" href="{{ news_path | relative_url }}">{{ site.data.i18n.all_news[page.lang] }}</a></div>
 </aside>
