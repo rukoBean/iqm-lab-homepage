@@ -3,7 +3,7 @@
 <article class="news-item">
   <div class="news-date">{{ item.label[page.lang] | default: item.date | escape }}</div>
   <div class="news-title">{{ item.title[page.lang] | escape }}</div>
-  <div class="news-text">{{ item.summary[page.lang] | default: item.body[page.lang] | replace: 'SITE_EMAIL', site.email | markdownify }}</div>
+  <div class="news-text">{{ item.summary[page.lang] | default: item.body[page.lang] | replace: 'SITE_EMAIL', site.email | markdownify | replace: '<a href="http', '<a target="_blank" rel="noopener" href="http' | replace: '<a href="//', '<a target="_blank" rel="noopener" href="//' }}</div>
 </article>
 {% else %}
 <article class="timeline-item" id="{{ item.id | escape }}">
@@ -16,7 +16,7 @@
     {% endif %}
   </div>
   <h3>{{ item.title[page.lang] | escape }}</h3>
-  {{ item.body[page.lang] | replace: 'SITE_EMAIL', site.email | markdownify }}
+  {{ item.body[page.lang] | replace: 'SITE_EMAIL', site.email | markdownify | replace: '<a href="http', '<a target="_blank" rel="noopener" href="http' | replace: '<a href="//', '<a target="_blank" rel="noopener" href="//' }}
   {% if item['news-post'] and item['news-post'] != empty %}
     {% assign news_post_folder = 'news/' %}
     {% if page.lang == 'en' %}{% assign news_post_folder = 'news/en/' %}{% endif %}

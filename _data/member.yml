@@ -34,8 +34,36 @@
   links:
   - url: "https://njamorn.github.io"
     link_label:
-      zh: 查看详情
+      zh: 个人主页
+      en: Website
+  - url: "https://physics.seu.edu.cn/2023/1116/c29635a472414/page.htm"
+    link_label:
+      zh: 学校主页
       en: View profile
+  - url: "mailto:amorn@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email
+- id: shanshan-wang
+  name:
+    zh: 王珊珊 / Shan-Shan Wang
+    en: Shan-Shan Wang / 王珊珊
+  role:
+    zh: 课题组教师
+    en: Faculty Member
+  bio:
+    zh: 研究方向：凝聚态物理中的拓扑方向。主要包括拓扑材料的预测及其电子，磁性和光学性质的研究；二维材料的物质研究等。
+    en: Research Interests include the prediction of topological materials and the study of their electronic, magnetic, and optical properties; as well as research on two-dimensional materials.
+  photo: /assets/images/sswang.webp
+  links:
+  - url: "https://physics.seu.edu.cn/2020/0302/c29635a318936/page.htm"
+    link_label:
+      zh: 学校主页
+      en: View profile
+  - url: "mailto:wangss@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email  
 - id: huijie-lian
   name:
     zh: 连慧婕 / Hui-Jie Lian
@@ -68,13 +96,29 @@
   bio:
     zh: 研究方向：机器学习辅助量子材料设计以及多铁材料
     en: Research interests include AI/ML-assisted quantum materials discovery and multiferroicity.
-  photo: https://jingyanchen730.github.io/jychen-homepage-new/images/picture.jpg
+  photo: /assets/images/jychen.webp
   links:
-  - url: "https://jingyanchen730.github.io/jychen-homepage-new/"
+  - url: "https://jingyanchen730.github.io/"
     link_label:
       zh: 个人主页
       en: Website
   - url: "mailto:jychen57@seu.edu.cn"
+    link_label:
+      zh: 邮箱
+      en: Email
+- id: lingtong-ding
+  name:
+    zh: 丁龄童 / Ling-Tong Ding
+    en: Ling-Tong Ding / 丁龄童
+  role:
+    zh: 博士生
+    en: PhD Student
+  bio:
+    zh: 研究方向：凝聚态理论计算
+    en: Research interests include theoretical and computational condensed matter physics.
+  photo: /assets/images/ltding.webp
+  links:
+  - url: "mailto:lt.ding@siat.ac.cn"
     link_label:
       zh: 邮箱
       en: Email
@@ -94,7 +138,7 @@
     link_label:
       zh: 个人主页
       en: Website (in Chinese)
-  - url: "mailto:220232408@seu.edu.cn"
+  - url: "mailto:lu_maco@outlook.com"
     link_label:
       zh: 邮箱
       en: Email

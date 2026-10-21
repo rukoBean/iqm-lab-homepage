@@ -14,7 +14,7 @@
           {% endif %}
           {% assign first_char = member_url | slice: 0 %}
           {% if first_char == '/' %}{% assign member_url = member_url | relative_url %}{% endif %}
-          <a class="text-link" href="{{ member_url | escape }}">{{ link.link_label[page.lang] | escape }}</a>
+          <a class="text-link" href="{{ member_url | escape }}"{% if member_url contains '://' or member_url contains '//' %} target="_blank" rel="noopener"{% endif %}>{{ link.link_label[page.lang] | escape }}</a>
           {% endfor %}
         </p>
         {% endif %}

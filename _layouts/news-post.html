@@ -9,7 +9,7 @@ layout: default
     {% if page.intro %}<p class="muted">{{ page.intro | escape }}</p>{% endif %}
   </div>
   <section>
-    <article class="news-post">{{ content }}</article>
+    <article class="news-post">{{ content | replace: '<a href="http', '<a target="_blank" rel="noopener" href="http' | replace: '<a href="//', '<a target="_blank" rel="noopener" href="//' }}</article>
   </section>
   <p><a class="button secondary" href="{{ news_list_path | relative_url }}">{{ site.data.i18n.back_news[page.lang] }}</a></p>
 </main>
