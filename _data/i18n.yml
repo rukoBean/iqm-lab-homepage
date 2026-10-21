@@ -28,12 +28,12 @@ read_news:
 back_news:
   zh: 返回新闻动态
   en: Back to news
-featured:
-  zh: ★ 代表性论文
-  en: ★ Featured
-missing_pdf:
-  zh: PDF 待补充
-  en: PDF unavailable
+publication_details:
+  zh: 详情
+  en: Details
+back_publications:
+  zh: 返回论文列表
+  en: Back to publications
 publication_years:
   zh: 发表年份
   en: Publication years

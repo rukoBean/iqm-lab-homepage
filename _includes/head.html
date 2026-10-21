@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title | escape }}</title>
+<title>{{ page.title | strip_html | escape }}</title>
 <meta name="description" content="{{ page.description | escape }}">
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.asset_version }}">
 <link rel="icon" href="{{ site.favicon | relative_url }}">

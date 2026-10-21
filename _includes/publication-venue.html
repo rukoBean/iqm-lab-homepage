@@ -1,0 +1,5 @@
+{%- assign publication_venue = include.pub.venue | strip -%}
+{%- assign publication_year = include.pub.year | append: '' | strip -%}
+{%- if publication_venue != '' or publication_year != '' -%}
+<div class="pub-venue">{% if publication_venue != '' %}<strong>{{ publication_venue | escape }}</strong>{% endif %}{% if publication_year != '' %} <span class="pub-year">({{ publication_year | escape }})</span>{% endif %}</div>
+{%- endif -%}

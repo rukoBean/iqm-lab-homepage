@@ -1,0 +1,12 @@
+{%- capture publication_authors -%}
+  {%- assign author_separator = '' -%}
+  {%- for author in include.pub.authors -%}
+    {%- assign author_name = author.name | strip -%}
+    {%- if author_name != '' -%}
+      {{- author_separator -}}
+      {%- if author.ours -%}<strong class="pub-author-ours">{{ author_name | escape }}</strong>{%- else -%}{{ author_name | escape }}{%- endif -%}
+      {%- assign author_separator = ', ' -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if publication_authors != '' -%}<div class="pub-authors">{{ publication_authors }}</div>{%- endif -%}

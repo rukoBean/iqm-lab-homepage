@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign pub = page.publication %}
+{% assign publications_path = '/publications/' %}
+{% if page.lang == 'en' %}{% assign publications_path = '/en/publications/' %}{% endif %}
+<main class="publication-detail-page">
+  <section class="publication-detail">
+    <a class="text-link" href="{{ publications_path | relative_url }}#pub-{{ pub.number }}">← {{ site.data.i18n.back_publications[page.lang] }}</a>
+    <header class="publication-detail-header">
+      <h1>{% include publication-title.html pub=pub %}</h1>
+      {% include publication-authors.html pub=pub %}
+      {% include publication-venue.html pub=pub %}
+      <div class="pub-actions">{% include publication-links.html pub=pub detail=true %}</div>
+    </header>
+    {% include publication-extra.html pub=pub %}
+    <div class="publication-content">{{ content }}</div>
+  </section>
+</main>

@@ -7,8 +7,9 @@ baseurl: ''
 favicon: /assets/favicon.svg
 sass:
   style: compressed
-asset_version: 20261021mobileheader
+asset_version: 20261021publications
 exclude:
 - README
 - Gemfile
 - Gemfile.lock
+- test

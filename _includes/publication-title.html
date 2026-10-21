@@ -1,0 +1,9 @@
+{%- include publication-labels.html pub=include.pub -%}
+{%- assign publication_doi = include.pub.doi | strip -%}
+{%- if publication_doi != '' -%}
+  {%- assign publication_doi_url = publication_doi -%}
+  {%- unless publication_doi contains '://' -%}{%- assign publication_doi_url = 'https://doi.org/' | append: publication_doi -%}{%- endunless -%}
+  <a class="pub-title-link" href="{{ publication_doi_url | escape }}" target="_blank" rel="noopener">{{ include.pub.title }}</a>
+{%- else -%}
+  {{ include.pub.title }}
+{%- endif -%}

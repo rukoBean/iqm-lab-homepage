@@ -1,0 +1,6 @@
+{%- assign publication_cover = include.pub.cover.image | strip -%}
+{%- if publication_cover != '' -%}
+  <img class="pub-cover" src="{{ publication_cover | relative_url | escape }}" alt="{{ include.pub.title | strip_html | escape }}" loading="lazy">
+{%- endif -%}
+{%- assign publication_summary = include.pub.summary | strip -%}
+{%- if publication_summary != '' -%}<p class="pub-summary">{{ publication_summary | escape }}</p>{%- endif -%}

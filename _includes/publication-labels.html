@@ -1,0 +1,7 @@
+{%- capture publication_labels -%}
+  {%- for label in include.pub.label -%}
+    {%- assign label_text = label[page.lang] | strip -%}
+    {%- if label_text != '' -%}<span class="badge star-badge">{{ label_text | escape }}</span>{%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if publication_labels != '' -%}<span class="pub-meta">{{ publication_labels }}</span>{%- endif -%}

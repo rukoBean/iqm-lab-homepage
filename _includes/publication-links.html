@@ -1,0 +1,7 @@
+{%- assign publication_page = include.pub.page | strip -%}
+{%- if publication_page != '' and include.detail != true -%}
+  {%- if page.lang == 'en' -%}{%- assign publication_page = '/en' | append: publication_page -%}{%- endif -%}
+  <a class="button secondary light-button" href="{{ publication_page | relative_url | escape }}">{{ site.data.i18n.publication_details[page.lang] }}</a>
+{%- endif -%}
+{%- assign publication_paper = include.pub.paper | strip -%}
+{%- if publication_paper != '' -%}<a class="button pub-pdf" href="{{ publication_paper | relative_url | escape }}" target="_blank" rel="noopener">PDF</a>{%- endif -%}
