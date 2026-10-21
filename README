@@ -228,6 +228,7 @@ Copy an entry into `_data/member.yml`:
 
 ```yaml
 - id: example-member
+  group: student
   name:
     zh: 示例成员
     en: Example Member
@@ -251,8 +252,13 @@ Copy an entry into `_data/member.yml`:
       en: Email
 ```
 
-Upload the image to `assets/images/`. Cards appear in file order. `photo` and
-`links` are optional. Add as many link entries as needed; links appear in list
+Set `group` to `faculty` or `student`. Faculty and students appear in separate
+panels without group headings, with faculty first. Cards appear in file order
+within each group. All cards show `bio` when provided. Student cards use a compact
+two-column grid that becomes one column on smaller screens.
+
+Upload the image to `assets/images/`. `bio`, `photo`, and `links` are optional.
+Add as many link entries as needed; links appear in list
 order as separate clickable labels. `url` is a `zh:` / `en:` pair whenever the
 target differs by language — a local path such as `/example-member.html` versus
 `/en/example-member.html`. For `mailto:` and external URLs the same value simply

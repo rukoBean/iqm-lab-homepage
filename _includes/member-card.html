@@ -1,9 +1,11 @@
 {% assign member = include.member %}
-    <div class="card member-summary-card">
+    <div class="card member-summary-card{% if member.group == 'student' %} member-summary-card--student{% endif %}">
       <div>
         <h3>{{ member.name[page.lang] | escape }}</h3>
         <p><strong>{{ member.role[page.lang] | escape }}</strong></p>
+        {% if member.bio[page.lang] != nil and member.bio[page.lang] != empty %}
         <p>{{ member.bio[page.lang] | escape }}</p>
+        {% endif %}
         {% if member.links.size > 0 %}
         <p class="member-links">
           {% for link in member.links %}

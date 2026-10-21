@@ -3,11 +3,22 @@ layout: default
 ---
 <main>
   {% include page-title.html %}
+  {% assign faculty = site.data.member | where: "group", "faculty" %}
+  {% assign students = site.data.member | where: "group", "student" %}
+  {% if faculty.size > 0 %}
   <section>
     <div class="member-list">
-      {% for member in site.data.member %}{% include member-card.html member=member %}{% endfor %}
+      {% for member in faculty %}{% include member-card.html member=member %}{% endfor %}
     </div>
   </section>
+  {% endif %}
+  {% if students.size > 0 %}
+  <section>
+    <div class="member-list member-list--students">
+      {% for member in students %}{% include member-card.html member=member %}{% endfor %}
+    </div>
+  </section>
+  {% endif %}
   <section>
     <div class="grid two"><div class="card"><h3>{{ page.cta_heading }}</h3><p>{{ page.cta_text }}</p><a class="button" href="{{ page.cta_path | relative_url }}">{{ page.cta_label }}</a></div></div>
   </section>
