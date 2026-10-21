@@ -7,7 +7,7 @@ baseurl: ''
 favicon: /assets/favicon.svg
 sass:
   style: compressed
-asset_version: 20261021cssnavalbum
+asset_version: 20261021publicationyears
 exclude:
 - README
 - Gemfile

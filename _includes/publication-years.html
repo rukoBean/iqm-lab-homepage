@@ -1,0 +1,11 @@
+{% assign publication_prefix = '/publications/' %}
+{% if page.lang == 'en' %}{% assign publication_prefix = '/en/publications/' %}{% endif %}
+{% assign publication_years = site.data.publications | map: 'year' | uniq | sort | reverse %}
+<nav aria-label="{{ site.data.i18n.publication_years[page.lang] }}">
+  <ul class="publication-years-list">
+    <li><a href="{{ publication_prefix | relative_url }}"{% unless page.year %} aria-current="page"{% endunless %}>{{ site.data.i18n.all_publications[page.lang] }}</a></li>
+    {% for year in publication_years %}
+    <li><a href="{{ publication_prefix | append: year | append: '/' | relative_url }}"{% if page.year == year %} aria-current="page"{% endif %}>{{ year }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

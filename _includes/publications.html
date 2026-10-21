@@ -1,4 +1,6 @@
-{% for pub in site.data.publications %}
+{% assign publications = site.data.publications %}
+{% if page.year %}{% assign publications = publications | where: 'year', page.year %}{% endif %}
+{% for pub in publications %}
     <article class="pub pub-card{% if pub.featured %} featured-pub{% endif %}">
       <div class="pub-main">
         <div class="pub-row">

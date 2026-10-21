@@ -34,6 +34,18 @@ featured:
 missing_pdf:
   zh: PDF 待补充
   en: PDF unavailable
+publication_years:
+  zh: 发表年份
+  en: Publication years
+all_publications:
+  zh: 全部
+  en: All
+filter_publication_year:
+  zh: 按年份筛选
+  en: Filter by year
+close_publication_years:
+  zh: 关闭年份筛选
+  en: Close year filter
 back_member:
   zh: 返回成员页
   en: Back to Member

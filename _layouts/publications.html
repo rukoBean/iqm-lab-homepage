@@ -1,7 +1,27 @@
 ---
 layout: default
 ---
-<main>
+<main class="publications-page">
   {% include page-title.html %}
-  <section>{% include publications.html %}</section>
+  <div class="publications-layout">
+    <aside class="publication-years-card" aria-labelledby="publication-years-heading">
+      <h2 id="publication-years-heading">{{ site.data.i18n.publication_years[page.lang] }}</h2>
+      {% include publication-years.html %}
+    </aside>
+    <div class="publications-content">
+      <button class="publication-filter-trigger" type="button" aria-controls="publication-years-drawer" aria-haspopup="dialog" aria-expanded="false">
+        <span>{{ site.data.i18n.filter_publication_year[page.lang] }}</span>
+        <span>{{ page.year | default: site.data.i18n.all_publications[page.lang] }} <span aria-hidden="true">☰</span></span>
+      </button>
+      <section class="publications-card" aria-label="{{ page.heading | escape }}">{% include publications.html %}</section>
+    </div>
+  </div>
+  <dialog class="publication-years-drawer" id="publication-years-drawer" aria-labelledby="publication-drawer-heading">
+    <div class="publication-drawer-header">
+      <h2 id="publication-drawer-heading">{{ site.data.i18n.publication_years[page.lang] }}</h2>
+      <button class="publication-drawer-close" type="button" aria-label="{{ site.data.i18n.close_publication_years[page.lang] }}" autofocus><span aria-hidden="true">×</span></button>
+    </div>
+    {% include publication-years.html %}
+  </dialog>
 </main>
+<script src="{{ '/assets/publications.js' | relative_url }}?v={{ site.asset_version }}" defer></script>

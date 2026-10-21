@@ -35,6 +35,27 @@ Page bodies are still one file per language:
 | Homepage introduction | `index.html` | `en/index.html` |
 
 Publications are shared in `_data/publications.yml`; PDF files live in `pdfs/`.
+Each publication has an integer `year` (for example, `year: 2026`). The year
+navigation lists the distinct years newest first, with **全部 / All** at the
+top. The all-publications pages are `/publications/` and `/en/publications/`;
+the existing `.html` pages also remain available. Year pages such as
+`/publications/2025/` and `/en/publications/2025/` filter by this field and keep
+the original publication numbers and file order.
+
+When adding the first publication for a new year, copy an existing year page
+in both `publications/` and `en/publications/`, updating its filename, `year`,
+`permalink`, `translation_path`, title, and heading. These are ordinary Jekyll
+pages and require no custom plugins. Both index pages and the `.html` pages use
+the same publication layout; keep their front matter in sync when editing page
+metadata.
+
+Desktop publication pages show the year navigation in a narrow left card.
+At 760px and below, **按年份筛选 / Filter by year** opens an 85%-width modal
+drawer. Close it with its close button, the backdrop, or Escape. The native
+dialog manages keyboard focus; the page cannot scroll while the drawer is
+open. Without JavaScript or dialog support, the year card stays above the
+publications so the links remain usable.
+
 Email and Google Scholar URL are shared in `_config.yml`.
 Page titles, descriptions, headings, and introductions are in the YAML front
 matter at the top of each page, so they are still written once per language.

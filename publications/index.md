@@ -1,0 +1,10 @@
+---
+layout: publications
+lang: zh
+title: 论文 | 智能量子材料课题组
+description: 智能量子材料课题组代表性论文与 PDF 列表。
+nav_id: publications
+translation_path: publications/
+heading: 论文列表
+intro: Peer-reviewed publications.
+---
