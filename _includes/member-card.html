@@ -1,5 +1,4 @@
 {% assign member = include.member %}
-<section>
     <div class="card member-summary-card">
       <div>
         <h3>{{ member.name[page.lang] | escape }}</h3>
@@ -21,4 +20,3 @@
       </div>
       {% if member.photo %}<img class="member-thumb" src="{{ member.photo | relative_url }}" alt="{{ member.name[page.lang] | escape }}">{% endif %}
     </div>
-</section>

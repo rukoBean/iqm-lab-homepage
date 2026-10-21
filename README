@@ -248,6 +248,9 @@ and close icons and their localized labels. Navigation does not require
 JavaScript. Use Enter or Space on the toggle to open or close it. The menu does
 not close on Escape, and its open state persists when resizing between desktop
 and mobile until toggled or a new page loads.
+The language switch stays visible beside the compact mobile toggle, on the same
+row as the logo. Its labels are `EN` on Chinese pages and `简` on English pages,
+on both desktop and mobile.
 
 Pages have `lang`, `nav_id`, and `translation_path` in front matter (news
 articles resolve their language-switch destination automatically, as above).

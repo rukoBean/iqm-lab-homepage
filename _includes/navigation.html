@@ -17,8 +17,10 @@
 <div class="topbar"><nav class="nav">
   <a class="brand" href="{{ prefix | relative_url }}"><img class="logo-mark" src="{{ '/assets/logo-transparent.png' | relative_url }}" alt="{{ site.data.i18n.logo_alt[page.lang] | escape }}"></a>
   <div class="navlinks navlinks--desktop">
-    {% include navigation-links.html prefix=prefix language_switch_path=language_switch_path %}
+    {% include navigation-links.html prefix=prefix %}
+    <a class="lang" href="{{ language_switch_path | relative_url | escape }}">{{ site.data.i18n.switch_language[page.lang] }}</a>
   </div>
+  <a class="lang nav-language" href="{{ language_switch_path | relative_url | escape }}">{{ site.data.i18n.switch_language[page.lang] }}</a>
   <details class="nav-menu">
     <summary class="nav-toggle">
       <span class="visually-hidden nav-toggle-menu">{{ site.data.i18n.open_menu[page.lang] | escape }}</span>
@@ -29,7 +31,7 @@
       </svg>
     </summary>
     <div class="navlinks">
-      {% include navigation-links.html prefix=prefix language_switch_path=language_switch_path %}
+      {% include navigation-links.html prefix=prefix %}
     </div>
   </details>
 </nav></div>
