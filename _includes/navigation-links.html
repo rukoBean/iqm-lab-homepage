@@ -1,0 +1,4 @@
+{% for item in site.data.navigation %}
+<a{% if page.nav_id == item.id %} class="active" aria-current="page"{% endif %} href="{{ include.prefix | append: item.path | relative_url }}">{{ item.label[page.lang] }}</a>
+{% endfor %}
+<a class="lang" href="{{ include.language_switch_path | relative_url | escape }}">{{ site.data.i18n.switch_language[page.lang] }}</a>

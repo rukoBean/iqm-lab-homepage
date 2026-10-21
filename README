@@ -202,13 +202,12 @@ entry requires `image` and both `subtitle.zh` and `subtitle.en`; subtitles are
 plain text and also supply the image alt text. Images display in a 4:3 frame,
 cropped to fit, so landscape photos work best.
 
-Photos scroll horizontally in a continuous loop only when they exceed the
-available width. When all photos fit, each appears once, with no automatic
-scrolling or pause button. This adjusts automatically when the window resizes.
-Hovering or focusing the album pauses it; the pause button can stop it until resumed.
-Visitors can also swipe or scroll manually. Reduced-motion preferences disable
-automatic scrolling, and a single photo stays stationary. An empty list shows
-a bilingual placeholder. Without JavaScript, photos remain manually scrollable.
+Photos appear once in a horizontal row. Visitors can swipe, use a trackpad or
+scrollbar, or focus the album and use the keyboard to scroll when photos exceed
+the available width. CSS proximity snapping helps align photos after scrolling.
+There is no automatic scrolling or pause/resume control. When all photos fit,
+they stay stationary. An empty list shows a bilingual placeholder. The album
+does not require JavaScript.
 
 ## Structure and layout changes
 
@@ -220,6 +219,14 @@ a bilingual placeholder. Without JavaScript, photos remain manually scrollable.
 - `_data/i18n.yml`: recurring interface labels and footer text, each written as
   a `zh:` / `en:` pair and read as `site.data.i18n.<key>[page.lang]`.
 - `assets/style.scss`: appearance; `assets/ai-bg.js`: background animation.
+
+Navigation links are shared in `_includes/navigation-links.html`. Above 980px,
+the desktop links are always visible. At 980px and below, a native HTML
+`details` / `summary` toggle opens the mobile menu; CSS switches the hamburger
+and close icons and their localized labels. Navigation does not require
+JavaScript. Use Enter or Space on the toggle to open or close it. The menu does
+not close on Escape, and its open state persists when resizing between desktop
+and mobile until toggled or a new page loads.
 
 Pages have `lang`, `nav_id`, and `translation_path` in front matter (news
 articles resolve their language-switch destination automatically, as above).

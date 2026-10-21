@@ -16,16 +16,20 @@
 {% endif %}
 <div class="topbar"><nav class="nav">
   <a class="brand" href="{{ prefix | relative_url }}"><img class="logo-mark" src="{{ '/assets/logo-transparent.png' | relative_url }}" alt="{{ site.data.i18n.logo_alt[page.lang] | escape }}"></a>
-  <button class="nav-toggle" type="button" aria-controls="navigation-links" aria-expanded="false" aria-label="{{ site.data.i18n.open_menu[page.lang] | escape }}" data-open-label="{{ site.data.i18n.open_menu[page.lang] | escape }}" data-close-label="{{ site.data.i18n.close_menu[page.lang] | escape }}" hidden>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
-      <path class="nav-toggle-menu" d="M4 6h16M4 12h16M4 18h16" />
-      <path class="nav-toggle-close" d="M6 6l12 12M6 18L18 6" />
-    </svg>
-  </button>
-  <div class="navlinks" id="navigation-links">
-    {% for item in site.data.navigation %}
-    <a{% if page.nav_id == item.id %} class="active" aria-current="page"{% endif %} href="{{ prefix | append: item.path | relative_url }}">{{ item.label[page.lang] }}</a>
-    {% endfor %}
-    <a class="lang" href="{{ language_switch_path | relative_url | escape }}">{{ site.data.i18n.switch_language[page.lang] }}</a>
+  <div class="navlinks navlinks--desktop">
+    {% include navigation-links.html prefix=prefix language_switch_path=language_switch_path %}
   </div>
+  <details class="nav-menu">
+    <summary class="nav-toggle">
+      <span class="visually-hidden nav-toggle-menu">{{ site.data.i18n.open_menu[page.lang] | escape }}</span>
+      <span class="visually-hidden nav-toggle-close">{{ site.data.i18n.close_menu[page.lang] | escape }}</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <path class="nav-toggle-menu" d="M4 6h16M4 12h16M4 18h16" />
+        <path class="nav-toggle-close" d="M6 6l12 12M6 18L18 6" />
+      </svg>
+    </summary>
+    <div class="navlinks">
+      {% include navigation-links.html prefix=prefix language_switch_path=language_switch_path %}
+    </div>
+  </details>
 </nav></div>
