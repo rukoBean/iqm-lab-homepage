@@ -57,14 +57,14 @@
     zh: 2026 · 论文发表
     en: 2026 · Publication
   title:
-    zh: 祝贺课题组与吕冰教授合作论文发表于 PRL
+    zh: 课题组与吕冰教授合作论文发表于 PRL
     en: Congratulations on our collaborative PRL publication with Prof. Bing Lv
   body:
-    zh: 祝贺林玲芳教授与德州大学达拉斯分校吕冰教授合作论文 [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t) 发表于 *Physical Review Letters*。
-    en: Congratulations to Prof. Lingfang Lin and Prof. Bing Lv at The University of Texas at Dallas on their collaborative paper [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t), published in *Physical Review Letters*.
+    zh: 课题组负责人林玲芳与德州大学达拉斯分校吕冰教授合作论文 [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t) 发表于 *Physical Review Letters*。
+    en: Our Principal Investigator Lingfang Lin and Prof. Bing Lv at The University of Texas at Dallas on their collaborative paper [“Block-Type Antiferromagnetism in Single Chain Quasi-One-Dimensional K3Fe2Se4”](https://doi.org/10.1103/g8zx-gc2t), published in *Physical Review Letters*.
   homepage: true
 - id: news-6
-  date: ""
+  date: "2026-10-20"
   pin: false
   label:
     zh: 2026 · 荣誉奖项
@@ -73,6 +73,20 @@
     zh: 祝贺课题组博士生陈静妍荣获博士新生奖
     en: Congratulations to our PhD student Jing-Yan Chen on receiving the New Doctoral Student Award
   body:
-    zh: 祝贺课题组一年级博士生陈静妍荣获东南大学物理学院2026级博士新生奖！详情请见[获奖名单公示](https://physics.seu.edu.cn/2026/1020/c23142a586756/page.htm)。
+    zh: 祝贺课题组一年级博士生陈静妍荣获东南大学物理学院 2026 级博士新生奖！详情请见[获奖名单公示](https://physics.seu.edu.cn/2026/1020/c23142a586756/page.htm)。
     en: Congratulations to our junior PhD student Jing-Yan Chen on receiving the New Doctoral Student Award for the 2026 entering cohort from the School of Physics at Southeast University! Please see the [award announcement](https://physics.seu.edu.cn/2026/1020/c23142a586756/page.htm) for details.
   homepage: true
+- id: news-7
+  date: "2026-10-22"
+  pin: false
+  label:
+    zh: 2026 · 论文发表
+    en: 2026 · Publication
+  title:
+    zh: 课题组负责人林玲芳在交错磁性物理领域发表 PRL 论文
+    en: Our Principal Investigator Lingfang Lin publishes a PRL paper on altermagnetism
+  body:
+    zh: 课题组负责人林玲芳在交错磁性物理研究方面取得进展，相关成果以“[Altermagnetism in Folded Iron Chain Systems](https://doi.org/10.1103/6327-7256)”为题发表于*Physical Review Letters*。
+    en: Our Principal Investigator Lingfang Lin has made progress in altermagnetism research. The results were published in *Physical Review Letters* as “[Altermagnetism in Folded Iron Chain Systems](https://doi.org/10.1103/6327-7256)”.
+  homepage: true
+  news-post: 261022/index

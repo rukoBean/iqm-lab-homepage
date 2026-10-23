@@ -216,11 +216,35 @@ show **Read more** only when this English file exists; they never link to the
 Chinese article as a fallback. All article source files stay inside `news/`.
 
 The article layout uses `title` for its heading unless an optional `heading`
-is provided; `intro` is also optional. It adds a localized link back to the news
-listing. The language switch finds the matching article automatically, or links
+is provided; `intro` is also optional. The title and body share one centered
+card, with a localized pill link back to the news listing at the top-left of the
+card. The language switch finds the matching article automatically, or links
 to the other language's news listing if no translation exists. News articles
 do not need `translation_path`. Use `relative_url` for local image/link URLs in
-article content, for example `![合影]({{ '/assets/images/group-photo.webp' | relative_url }})`.
+article content.
+
+Images are centered automatically. A bare Markdown image still works, but it has
+no caption:
+
+```markdown
+![合影]({{ '/assets/images/group-photo.webp' | relative_url }})
+```
+
+For a visible caption, use a raw HTML figure block. Leave a blank line before and
+after the block, start it at column 0, and keep the caption in the article's
+language:
+
+```html
+<figure class="news-figure">
+  <img src="{{ '/news/261022/261022-1.png' | relative_url }}" alt="图片内容简述" width="780" height="213">
+  <figcaption>图 1：图片说明文字。</figcaption>
+</figure>
+```
+
+Liquid runs before Markdown, so `relative_url` works inside the block. Kramdown
+does not parse Markdown inside raw HTML blocks by default, so use HTML tags for
+emphasis or links in the caption. Always provide `alt`; the caption is visible
+text and is not a replacement for it.
 
 ## Add a member
 

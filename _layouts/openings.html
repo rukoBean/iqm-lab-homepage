@@ -2,4 +2,4 @@
 layout: default
 ---
 {% assign data = site.data.openings %}
-<main>{% include page-title.html %}<section class="cta"><h2>{{ data.recruiting_heading[page.lang] }}</h2><p>{{ data.recruiting_text[page.lang] | escape }}</p><p class="muted">{{ data.note[page.lang] | escape }}</p></section>{% if data.items.size > 0 %}<section><h2>{{ data.requirements_heading[page.lang] }}</h2>{% include cards.html items=data.items %}</section>{% endif %}<section><h2>{{ data.apply_heading[page.lang] }}</h2><p>{{ data.apply_text[page.lang] | escape }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></p></section></main>
+<main class="narrow-main">{% include page-title.html %}<section class="cta"><h2>{{ data.recruiting_heading[page.lang] }}</h2><p>{{ data.recruiting_text[page.lang] | escape }}</p><p class="muted">{{ data.note[page.lang] | escape }}</p></section>{% if data.items.size > 0 %}<section><h2>{{ data.requirements_heading[page.lang] }}</h2>{% include cards.html items=data.items %}</section>{% endif %}<section><h2>{{ data.apply_heading[page.lang] }}</h2><p>{{ data.apply_text[page.lang] | escape }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></p></section></main>

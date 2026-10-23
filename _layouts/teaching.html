@@ -2,4 +2,4 @@
 layout: default
 ---
 {% assign data = site.data.teaching %}
-<main>{% include page-title.html %}<section><h2>{{ data.items_heading[page.lang] }}</h2>{% include cards.html items=data.items %}</section><section><h2>{{ data.future_heading[page.lang] }}</h2><p>{{ data.future_text[page.lang] | escape }}</p></section></main>
+<main class="narrow-main">{% include page-title.html %}<section><h2>{{ data.items_heading[page.lang] }}</h2>{% include cards.html items=data.items %}</section><section><h2>{{ data.future_heading[page.lang] }}</h2><p>{{ data.future_text[page.lang] | escape }}</p></section></main>
