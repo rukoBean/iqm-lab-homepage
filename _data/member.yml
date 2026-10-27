@@ -139,7 +139,7 @@
   bio:
     zh: 研究方向：凝聚态物理，多铁材料，AI
     en: My research interest includes AI for multiferroicity. Feel free to reach out for discussions or collaborations.
-  photo: https://jiaqifeng0228.github.io/images/picture.png
+  photo: /assets/images/jqchen.webp
   links:
   - url: "https://jiaqifeng0228.github.io/"
     link_label:
