@@ -90,3 +90,17 @@
     en: Our Principal Investigator Lingfang Lin has made progress in altermagnetism research. The results were published in *Physical Review Letters* as “[Altermagnetism in Folded Iron Chain Systems](https://doi.org/10.1103/6327-7256)”.
   homepage: true
   news-post: 261022/index
+- id: news-8
+  date: "2026-10-31"
+  pin: false
+  label:
+    zh: 2026 · 荣誉奖项
+    en: 2026 · Honors and Awards
+  title:
+    zh: 祝贺课题组博士生陈静妍荣获最佳海报奖
+    en: Congratulations to our PhD student Jing-Yan Chen on receiving the Best Poster Award
+  body:
+    zh: 在第八届中法先进材料大会暨2026年度中法工程师人才培养研讨会上，课题组一年级博士生陈静妍凭借参展海报《Deep Learning Potential for Noncollinear Ferrielectric Material WO₂Cl₂ via Concurrent Learning》荣获“最佳海报奖”。
+    en: Congratulations to our junior PhD student Jing-Yan Chen on receiving the Best Poster Award at the 8th Sino-French Advanced Materials Symposium and Engineering Talent Cultivation Seminar for her poster “Deep Learning Potential for Noncollinear Ferrielectric Material WO₂Cl₂ via Concurrent Learning”.
+  homepage: true
+  news-post: 261031/index
