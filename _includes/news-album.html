@@ -1,0 +1,22 @@
+<aside class="news-album" id="news-album" aria-labelledby="news-album-heading">
+  <h2 id="news-album-heading">{{ site.data.i18n.news_album[page.lang] }}</h2>
+  {% if site.data.news-album.size > 0 %}
+  <div class="news-album-photos">
+    {% for photo in site.data.news-album reversed %}
+    {% assign news_photo_link = photo.news[page.lang] %}
+    {% assign news_photo_alt = photo.subtitle[page.lang] | default: site.data.i18n.news_album_photo[page.lang] %}
+    <figure class="news-album-photo">
+      <img src="{{ photo.image | relative_url | escape }}" alt="{{ news_photo_alt | escape }}" loading="lazy" decoding="async">
+      {% if photo.subtitle[page.lang] or news_photo_link %}
+      <figcaption>
+        {% if photo.subtitle[page.lang] %}<p>{{ photo.subtitle[page.lang] | escape }}</p>{% endif %}
+        {% if news_photo_link %}<a href="{{ news_photo_link | relative_url | escape }}">{{ site.data.i18n.view_photo_news[page.lang] }} →</a>{% endif %}
+      </figcaption>
+      {% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="muted album-empty">{{ site.data.i18n.news_album_empty[page.lang] }}</p>
+  {% endif %}
+</aside>

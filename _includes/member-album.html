@@ -1,11 +1,13 @@
 <section class="member-album" aria-labelledby="member-album-heading">
   <div class="album-header">
     <h2 id="member-album-heading">{{ site.data.i18n.member_album[page.lang] }}</h2>
+    {% assign news_album_path = '/news.html' %}{% if page.lang == 'en' %}{% assign news_album_path = '/en/news.html' %}{% endif %}
+    <a class="button" href="{{ news_album_path | relative_url }}#news-album">{{ site.data.i18n.view_news_album[page.lang] }}</a>
   </div>
-  {% if site.data.album.size > 0 %}
+  {% if site.data.activity-album.size > 0 %}
   <div class="album-scroll" tabindex="0" role="region" aria-labelledby="member-album-heading">
     <div class="album-track">
-      {% for photo in site.data.album %}
+      {% for photo in site.data.activity-album reversed %}
       <figure class="album-photo">
         <img src="{{ photo.image | relative_url }}" alt="{{ photo.subtitle[page.lang] | escape }}" loading="lazy" width="640" height="480">
         <figcaption>{{ photo.subtitle[page.lang] | escape }}</figcaption>

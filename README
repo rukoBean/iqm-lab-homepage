@@ -20,7 +20,8 @@ Both languages of each entry live in one shared data file:
 | --- | --- |
 | News, including the homepage panel | `_data/news.yml` |
 | Member cards | `_data/member.yml` |
-| Member activity album | `_data/album.yml` |
+| Member activity album | `_data/activity-album.yml` |
+| News album photos and captions | `_data/news-album.yml` |
 | Research cards and methods | `_data/research.yml` |
 | Teaching cards and plans | `_data/teaching.yml` |
 | Recruiting information | `_data/openings.yml` |
@@ -296,18 +297,17 @@ no redirects.
 
 ## Add member activity photos
 
-The final card on both member pages is **组员活动相册 / Member Activities**.
-Upload photos to `assets/images/activities/` (create the directory when adding
-the first photo), then add entries to `_data/album.yml`:
+The final card on both member pages is **课题组相册 / Group Activities**.
+Upload photos to `album/`, then add entries to `_data/activity-album.yml`:
 
 ```yaml
-- image: /assets/images/activities/group-photo.webp
+- image: /album/group-photo.webp
   subtitle:
     zh: 课题组合影
     en: Lab group photo
 ```
 
-Replace the initial `[]` with your entries. Photos appear in file order. Each
+Add entries oldest first; photos display newest first (reverse file order). Each
 entry requires `image` and both `subtitle.zh` and `subtitle.en`; subtitles are
 plain text and also supply the image alt text. Images display in a 4:3 frame,
 cropped to fit, so landscape photos work best.
@@ -318,6 +318,34 @@ the available width. CSS proximity snapping helps align photos after scrolling.
 There is no automatic scrolling or pause/resume control. When all photos fit,
 they stay stationary. An empty list shows a bilingual placeholder. The album
 does not require JavaScript.
+
+The **查看新闻相册 / View News Album** button beside the heading jumps to the
+news album on the matching language's news page.
+
+## News album
+
+Both news listing pages have a photo sidebar at `#news-album`. On small screens,
+it appears below the news list. Images display in a 4:3 frame, cropped to fit.
+
+Manage every photo in `_data/news-album.yml`, using the same `image` and bilingual
+`subtitle` fields as the activity album. Only listed photos appear; adding an
+image to `news/` does not add it to the album. Images can live anywhere on the
+site. Add entries oldest first; the album displays them in reverse file order.
+
+```yaml
+- image: /news/261031/261031-1.webp
+  subtitle:
+    zh: 颁奖仪式现场
+    en: Award ceremony
+  news:
+    zh: /news/261031/
+```
+
+Use site-root image paths and plain-text subtitles. Optional `news.zh` and
+`news.en` fields add a **查看这则新闻 / View this news** link below the subtitle
+in that language. Omit the link when a corresponding detail page does not exist;
+the English album can display photos and captions without linking to Chinese
+articles. Set the list to `[]` to show the bilingual empty-album placeholder.
 
 ## Structure and layout changes
 

@@ -1,0 +1,24 @@
+# Add photos oldest first; the album displays newest first.
+# Each entry needs image and bilingual subtitle fields, just like activity-album.yml.
+# Optional news.zh / news.en fields link to the corresponding news detail page.
+# Omit a language's news link when its detail page is unavailable.
+- image: /album/261025-1.webp
+  subtitle:
+    zh: 2026年10月长沙CPS报告（林玲芳）
+    en: 2026.10 CPS pre by L.F Lin
+- image: /album/261025-2.webp
+  subtitle:
+    zh: 2026年10月长沙CPS报告（连慧捷）
+    en: 2026.10 CPS pre by H.J Lian
+- image: /news/261031/261031-1.webp
+  subtitle:
+    zh: 陈静妍荣获最佳海报奖——颁奖仪式现场
+    en: Jing-Yan Chen receives the Best Poster Award
+  news:
+    zh: /news/261031/
+- image: /news/261031/261031-3.webp
+  subtitle:
+    zh: 陈静妍与参展海报合影
+    en: Jing-Yan Chen with her poster
+  news:
+    zh: /news/261031/

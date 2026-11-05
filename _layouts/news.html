@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-<main class="narrow-main">
+<main class="news-page">
   {% include page-title.html %}
-  <section>
-    <div class="timeline">
-{% for item in site.data.news reversed %}{% include news-item.html item=item %}{% endfor %}
-</div>
-</section>
+  <div class="news-layout">
+    <section class="news-timeline" aria-label="{{ site.data.i18n.news[page.lang] }}">
+      <div class="timeline">
+        {% for item in site.data.news reversed %}{% include news-item.html item=item %}{% endfor %}
+      </div>
+    </section>
+    {% include news-album.html %}
+  </div>
 </main>

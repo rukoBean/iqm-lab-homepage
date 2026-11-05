@@ -1,6 +1,6 @@
-# Add photos in display order. Store images in assets/images/activities/.
+# Add photos oldest first; the album displays newest first. Store images in album/.
 # Each entry needs an image path and subtitles in both languages:
-# - image: /assets/images/activities/group-photo.webp
+# - image: /album/group-photo.webp
 #   subtitle:
 #     zh: 课题组合影
 #     en: Lab group photo
@@ -16,11 +16,3 @@
   subtitle:
     zh: 2026年10月长沙CPS聚餐
     en: 2026.10 CPS dinner
-- image: /album/261025-1.webp
-  subtitle:
-    zh: 2026年10月长沙CPS报告（林玲芳）
-    en: 2026.10 CPS pre by L.F Lin
-- image: /album/261025-2.webp
-  subtitle:
-    zh: 2026年10月长沙CPS报告（连慧捷）
-    en: 2026.10 CPS pre by H.J Lian
