@@ -20,7 +20,7 @@ member_path: /member.html
 
 课题组致力于把可解释的物理机制、先进计算方法与 AI/ML 材料发现相结合，探索新型量子材料中的电子结构、磁电耦合和非常规超导机制。
 
-<a class="button" href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> <a class="button secondary light-button" href="{{ site.baseurl }}/publications.html">论文列表</a>
+<a class="button" href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> <a class="button secondary light-button" href="{{ site.baseurl }}/publications/">论文列表</a>
 
 </div>
 

@@ -20,7 +20,7 @@ Dr. Ling-Fang Lin works on condensed matter physics and theoretical quantum mate
 
 The group aims to combine interpretable physical mechanisms, advanced computational methods, and AI/ML-driven materials discovery to explore electronic structures, magnetoelectric coupling, and unconventional superconducting mechanisms in quantum materials.
 
-<a class="button" href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> <a class="button secondary light-button" href="{{ site.baseurl }}/en/publications.html">Publications</a>
+<a class="button" href="{{ site.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a> <a class="button secondary light-button" href="{{ site.baseurl }}/en/publications/">Publications</a>
 
 </div>
 

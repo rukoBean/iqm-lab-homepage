@@ -19,7 +19,7 @@
     zh: 科研
     en: Research
 - id: publications
-  path: publications
+  path: publications/
   label:
     zh: 论文
     en: Publications

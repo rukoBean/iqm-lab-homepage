@@ -11,15 +11,16 @@ items:
   description:
     zh: 材料数据、物理启发特征、机器学习模型、可解释性与材料筛选。
     en: Materials data, physics-informed descriptors, machine-learning models, interpretability, and materials screening.
-- title:
+items_heading:
+  zh: 拟建设课程
+  en: Planned courses
+training:
+  title:
     zh: 科研训练
     en: Research training
   description:
     zh: 面向本科生和研究生的文献阅读、代码训练、计算流程和科研表达。
     en: Literature reading, coding practice, computational workflows, and scientific communication for undergraduate and graduate students.
-items_heading:
-  zh: 拟建设课程与训练方向
-  en: Planned courses and training directions
 future_heading:
   zh: 后续计划
   en: Future plans
