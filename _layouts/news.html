@@ -1,14 +1,24 @@
 ---
 layout: default
 ---
-<main class="news-page">
+<main class="narrow-main news-page">
   {% include page-title.html %}
-  <div class="news-layout">
-    <section class="news-timeline" aria-label="{{ site.data.i18n.news[page.lang] }}">
-      <div class="timeline">
-        {% for item in site.data.news reversed %}{% include news-item.html item=item %}{% endfor %}
-      </div>
-    </section>
-    {% include news-photos.html %}
-  </div>
+  {% assign album_heading = site.data.i18n.news_photos[page.lang] %}
+  {% assign album_empty_text = site.data.i18n.news_photos_empty[page.lang] %}
+  {% assign album_fallback_alt = site.data.i18n.news_photo[page.lang] %}
+  {% assign album_link_label = site.data.i18n.view_photo_news[page.lang] %}
+  {% include gallery.html
+    id="news-photos"
+    photos=site.data.news-photos
+    heading=album_heading
+    empty_text=album_empty_text
+    fallback_alt=album_fallback_alt
+    photo_link_key="news"
+    photo_link_label=album_link_label
+  %}
+  <section class="news-timeline" aria-label="{{ site.data.i18n.news[page.lang] }}">
+    <div class="timeline">
+      {% for item in site.data.news reversed %}{% include news-item.html item=item %}{% endfor %}
+    </div>
+  </section>
 </main>

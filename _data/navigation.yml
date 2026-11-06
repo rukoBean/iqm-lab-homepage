@@ -9,7 +9,7 @@
     zh: 新闻动态
     en: News
 - id: member
-  path: member
+  path: member/
   label:
     zh: 课题组成员
     en: Member

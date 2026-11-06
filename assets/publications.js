@@ -29,7 +29,7 @@
     document.body.classList.remove('publication-drawer-open');
   });
 
-  window.matchMedia('(max-width: 760px)').addEventListener('change', (event) => {
+  window.matchMedia('(max-width: 1255px)').addEventListener('change', (event) => {
     if (!event.matches && drawer.open) drawer.close();
   });
   page.classList.add('publications-enhanced');

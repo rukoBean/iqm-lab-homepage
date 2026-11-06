@@ -1,5 +1,0 @@
-<div class="grid">
-{% for item in include.items %}
-  <div class="card"><h3>{{ item.title[page.lang] | escape }}</h3>{{ item.description[page.lang] | markdownify }}</div>
-{% endfor %}
-</div>

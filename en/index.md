@@ -16,7 +16,7 @@ translation_path: ''
       <p class="lead">We welcome students and collaborators with backgrounds in physics, materials science, computing, mathematics, or artificial intelligence to help build an open, interdisciplinary, and forward-looking research platform for intelligent quantum materials.</p>
       <div class="buttons hero-actions">
         <a class="button" href="{{ site.baseurl }}/en/research.html">Research Areas</a>
-        <a class="button secondary" href="{{ site.baseurl }}/en/member.html">Group Members</a>
+        <a class="button secondary" href="{{ site.baseurl }}/en/member/">Group Members</a>
         <a class="button secondary" href="{{ site.baseurl }}/en/openings.html">Join Us</a>
       </div>
     </div>

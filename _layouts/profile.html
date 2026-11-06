@@ -5,7 +5,7 @@ layout: default
 {% include page-title.html %}
 <section><div class="member-profile">
   <div>{{ content }}</div>
-  <img class="member-photo" src="{{ page.photo | relative_url }}" alt="{{ page.heading | escape }}">
+  {% if page.photo %}<img class="member-photo" src="{{ page.photo | relative_url }}" alt="{{ page.heading | escape }}">{% endif %}
 </div></section>
 <p><a class="button secondary" href="{{ page.member_path | relative_url }}">{{ site.data.i18n.back_member[page.lang] }}</a></p>
 </main>

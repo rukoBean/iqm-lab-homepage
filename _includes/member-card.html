@@ -6,8 +6,11 @@
         {% if member.bio[page.lang] != nil and member.bio[page.lang] != empty %}
         <p>{{ member.bio[page.lang] | escape }}</p>
         {% endif %}
-        {% if member.links.size > 0 %}
+        {% if member.profile_urls or member.links.size > 0 %}
         <p class="member-links">
+          {% if member.profile_urls %}
+          <a class="text-link" href="{{ member.profile_urls[page.lang] | relative_url }}">{{ site.data.i18n.member_profile[page.lang] }}</a>
+          {% endif %}
           {% for link in member.links %}
           {% assign member_url = link.url %}
           {% if link.url.zh or link.url.en %}

@@ -1,5 +1,0 @@
----
-layout: default
----
-{% assign data = site.data.research %}
-<main class="narrow-main">{% include page-title.html %}<section>{% include cards.html items=data.items %}</section><section><h2>{{ data.methods_heading[page.lang] }}</h2>{% for method in data.methods %}<span class="badge">{{ method | escape }}</span>{% endfor %}</section></main>

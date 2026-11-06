@@ -13,7 +13,7 @@ permalink: /news/261022/
 交错磁性是一种宏观净磁矩为零、但电子能带在动量空间中存在自旋劈裂的新型磁性态。目前，交错磁性的研究主要集中在具有奈尔型（Néel-type）反铁磁序的体系中。随着交错磁性研究的深入，一个重要的科学问题逐渐浮现：块状磁序能否产生交错磁性？其实现需要哪些对称性条件和微观机制？这类体系又将展现怎样独特的电子结构与输运性质，以及能否在真实材料中实现？
 
 <figure class="news-figure">
-  <img src="{{ '/news/261022/261022-1.png' | relative_url }}" alt="折叠铁硒链的堆叠结构与磁序示意图，包含堆叠结构、完美链与折叠链三个分图" width="780" height="213" decoding="async">
+  <img src="{{ '/news/photos/261022-1.png' | relative_url }}" alt="折叠铁硒链的堆叠结构与磁序示意图，包含堆叠结构、完美链与折叠链三个分图" width="780" height="213" decoding="async">
   <figcaption>图 1：折叠铁硒链的堆叠结构与磁序示意图。(a) 堆叠结构；(b) 完美链；(c) 折叠链。</figcaption>
 </figure>
 

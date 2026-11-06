@@ -1,18 +1,18 @@
-# Add photos oldest first; the album displays newest first. Store images in album/.
+# Add photos oldest first; the album displays newest first. Store images in member/album/.
 # Each entry needs an image path and subtitles in both languages:
-# - image: /album/group-photo.webp
+# - image: /member/album/group-photo.webp
 #   subtitle:
 #     zh: 课题组合影
 #     en: Lab group photo
-- image: /album/260923.webp
+- image: /member/album/260923.webp
   subtitle:
     zh: 2026年9月全家福合影
     en: 2026.9 Lab group photo
-- image: /album/261016.webp
+- image: /member/album/261016.webp
   subtitle:
     zh: 2026年10月食堂聚餐
     en: 2026.10 Dinner at Cafeteria
-- image: /album/261024.webp
+- image: /member/album/261024.webp
   subtitle:
     zh: 2026年10月长沙CPS聚餐
     en: 2026.10 CPS dinner

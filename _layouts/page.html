@@ -3,5 +3,29 @@ layout: default
 ---
 <main class="narrow-main">
 {% include page-title.html %}
+{% if page.section_cards %}
+  {% comment %}Each level-two heading starts a panel; leading content may be a panel too.{% endcomment %}
+  {% assign sections = content | split: '<h2' %}
+  {% for section in sections %}
+    {% assign section_body = section %}
+    {% assign section_text = section | strip %}
+    {% assign section_heading = '' %}
+    {% if section_text == '' %}{% continue %}{% endif %}
+    {% unless forloop.first %}
+      {% assign heading_markup = section_body | split: '</h2>' | first | append: '</h2>' %}
+      {% capture section_heading %}<h2{{ heading_markup }}{% endcapture %}
+      {% assign section_body = section_body | remove_first: heading_markup %}
+    {% endunless %}
+    <section{% if section_heading contains 'class="cta"' %} class="cta"{% endif %}>
+      {{ section_heading | remove: ' class="cta"' }}
+      {% if section_body contains 'class="card"' %}
+        <div class="grid">{{ section_body }}</div>
+      {% else %}
+        {{ section_body }}
+      {% endif %}
+    </section>
+  {% endfor %}
+{% else %}
 <section>{{ content }}</section>
+{% endif %}
 </main>

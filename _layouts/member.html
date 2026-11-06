@@ -3,8 +3,8 @@ layout: default
 ---
 <main class="narrow-main">
   {% include page-title.html %}
-  {% assign faculty = site.data.member | where: "group", "faculty" %}
-  {% assign students = site.data.member | where: "group", "student" %}
+  {% assign faculty = site.data.members | where: "group", "faculty" %}
+  {% assign students = site.data.members | where: "group", "student" %}
   {% if faculty.size > 0 %}
   <section>
     <div class="member-list">
@@ -24,5 +24,13 @@ layout: default
     <p>{{ page.cta_text }}</p>
     <a class="button" href="{{ page.cta_path | relative_url }}">{{ page.cta_label }}</a>
   </section>
-  {% include member-album.html %}
+  {% assign album_heading = site.data.i18n.member_album[page.lang] %}
+  {% assign album_empty_text = site.data.i18n.member_album_empty[page.lang] %}
+  {% assign member_album = site.data["member-album"] %}
+  {% include gallery.html
+    id="member-album"
+    photos=member_album
+    heading=album_heading
+    empty_text=album_empty_text
+  %}
 </main>

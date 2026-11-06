@@ -49,6 +49,9 @@ close_publication_years:
 back_member:
   zh: 返回成员页
   en: Back to Member
+member_profile:
+  zh: 查看详情
+  en: View profile
 member_album:
   zh: 课题组相册
   en: Group Activities
@@ -58,9 +61,6 @@ member_album_empty:
 news_photos:
   zh: 新闻照片
   en: News Photos
-view_news_photos:
-  zh: 查看新闻照片
-  en: View News Photos
 view_photo_news:
   zh: 查看这则新闻
   en: View this news

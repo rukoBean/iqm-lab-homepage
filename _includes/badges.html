@@ -1,0 +1,1 @@
+<div>{% assign badges = include.items | split: '|' %}{% for badge in badges %}<span class="badge">{{ badge | escape }}</span>{% endfor %}</div>

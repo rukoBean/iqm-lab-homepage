@@ -1,0 +1,27 @@
+<section class="photo-album-card" id="{{ include.id | escape }}" aria-labelledby="{{ include.id | escape }}-heading">
+  <h2 class="album-heading" id="{{ include.id | escape }}-heading">{{ include.heading | escape }}</h2>
+  {% if include.photos.size > 0 %}
+  <div class="album-scroll" tabindex="0" role="region" aria-labelledby="{{ include.id | escape }}-heading">
+    <div class="album-track">
+      {% for photo in include.photos reversed %}
+      {% assign photo_alt = photo.subtitle[page.lang] | default: include.fallback_alt | default: include.heading %}
+      {% assign photo_link = nil %}
+      {% if include.photo_link_key and include.photo_link_label %}
+        {% assign photo_link = photo[include.photo_link_key][page.lang] %}
+      {% endif %}
+      <figure class="album-photo">
+        <img src="{{ photo.image | relative_url | escape }}" alt="{{ photo_alt | escape }}" loading="lazy" decoding="async" width="640" height="480">
+        {% if photo.subtitle[page.lang] or photo_link %}
+        <figcaption>
+          {% if photo.subtitle[page.lang] %}<p>{{ photo.subtitle[page.lang] | escape }}</p>{% endif %}
+          {% if photo_link %}<a href="{{ photo_link | relative_url | escape }}">{{ include.photo_link_label | escape }} →</a>{% endif %}
+        </figcaption>
+        {% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <p class="muted album-empty">{{ include.empty_text | escape }}</p>
+  {% endif %}
+</section>
