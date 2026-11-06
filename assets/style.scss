@@ -136,16 +136,16 @@ body::before, .topbar::before { content: ""; position: fixed; inset: 0; pointer-
 .news-published { margin-left: auto; color: var(--muted); font-size: .85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .news-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 24px; align-items: start; }
 .news-timeline { min-width: 0; margin: 0; }
-.news-album { min-width: 0; padding: 22px; background: rgba(255,255,255,.94); border: 1px solid rgba(126,242,255,.18); border-radius: 24px; box-shadow: 0 18px 55px rgba(0,0,0,.18); scroll-margin-top: 130px; }
-.news-album h2 { margin-bottom: 18px; }
-.news-album-photos { display: grid; gap: 18px; }
-.news-album-photo { min-width: 0; margin: 0; overflow: hidden; border: 1px solid #dceaf3; border-radius: 18px; background: #fff; }
-.news-album-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-.news-album-photo figcaption { padding: 12px 15px; font-size: .9rem; overflow-wrap: anywhere; }
-.news-album-photo figcaption p { margin: 0 0 8px; }
-.news-album-photo figcaption p:last-child { margin-bottom: 0; }
-.news-album-photo a { font-weight: 750; text-underline-offset: 3px; }
-.news-album-photo a:focus-visible, .member-album .button:focus-visible { outline: 3px solid #0b66a0; outline-offset: 3px; }
+.news-photos { min-width: 0; padding: 22px; background: rgba(255,255,255,.94); border: 1px solid rgba(126,242,255,.18); border-radius: 24px; box-shadow: 0 18px 55px rgba(0,0,0,.18); scroll-margin-top: 130px; }
+.news-photos h2 { margin-bottom: 18px; }
+.news-photos-grid { display: grid; gap: 18px; }
+.news-photo { min-width: 0; margin: 0; overflow: hidden; border: 1px solid #dceaf3; border-radius: 18px; background: #fff; }
+.news-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.news-photo figcaption { padding: 12px 15px; font-size: .9rem; overflow-wrap: anywhere; }
+.news-photo figcaption p { margin: 0 0 8px; }
+.news-photo figcaption p:last-child { margin-bottom: 0; }
+.news-photo a { font-weight: 750; text-underline-offset: 3px; }
+.news-photo a:focus-visible, .member-album .button:focus-visible { outline: 3px solid #0b66a0; outline-offset: 3px; }
 @media (max-width: 760px) { .news-layout { grid-template-columns: minmax(0, 1fr); } }
 /* News article layout (news-post.html) */
 .news-post { overflow-wrap: anywhere; }

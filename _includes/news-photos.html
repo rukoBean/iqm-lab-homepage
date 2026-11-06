@@ -1,11 +1,11 @@
-<aside class="news-album" id="news-album" aria-labelledby="news-album-heading">
-  <h2 id="news-album-heading">{{ site.data.i18n.news_album[page.lang] }}</h2>
-  {% if site.data.news-album.size > 0 %}
-  <div class="news-album-photos">
-    {% for photo in site.data.news-album reversed %}
+<aside class="news-photos" id="news-photos" aria-labelledby="news-photos-heading">
+  <h2 id="news-photos-heading">{{ site.data.i18n.news_photos[page.lang] }}</h2>
+  {% if site.data.news-photos.size > 0 %}
+  <div class="news-photos-grid">
+    {% for photo in site.data.news-photos reversed %}
     {% assign news_photo_link = photo.news[page.lang] %}
-    {% assign news_photo_alt = photo.subtitle[page.lang] | default: site.data.i18n.news_album_photo[page.lang] %}
-    <figure class="news-album-photo">
+    {% assign news_photo_alt = photo.subtitle[page.lang] | default: site.data.i18n.news_photo[page.lang] %}
+    <figure class="news-photo">
       <img src="{{ photo.image | relative_url | escape }}" alt="{{ news_photo_alt | escape }}" loading="lazy" decoding="async">
       {% if photo.subtitle[page.lang] or news_photo_link %}
       <figcaption>
@@ -17,6 +17,6 @@
     {% endfor %}
   </div>
   {% else %}
-  <p class="muted album-empty">{{ site.data.i18n.news_album_empty[page.lang] }}</p>
+  <p class="muted album-empty">{{ site.data.i18n.news_photos_empty[page.lang] }}</p>
   {% endif %}
 </aside>

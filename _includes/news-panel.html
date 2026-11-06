@@ -1,4 +1,4 @@
-{% assign news_path = '/news.html' %}{% if page.lang == 'en' %}{% assign news_path = '/en/news.html' %}{% endif %}
+{% assign news_path = '/news/' %}{% if page.lang == 'en' %}{% assign news_path = '/en/news/' %}{% endif %}
 {% assign homepage_news = site.data.news | where: 'homepage', true | reverse %}
 {% assign pinned_count = homepage_news | where: 'pin', true | size %}
 {% assign remaining_slots = 5 | minus: pinned_count %}

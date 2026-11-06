@@ -4,7 +4,7 @@
     zh: 主页
     en: Home
 - id: news
-  path: news
+  path: news/
   label:
     zh: 新闻动态
     en: News

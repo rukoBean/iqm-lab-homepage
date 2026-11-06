@@ -11,7 +11,7 @@
   {% endif %}
   {% assign translated_news_source = other_news_folder | append: page.name %}
   {% assign translated_news_page = site.pages | where: 'path', translated_news_source | where: 'lang', other_news_lang | first %}
-  {% assign language_switch_path = other_prefix | append: 'news.html' %}
+  {% assign language_switch_path = other_prefix | append: 'news/' %}
   {% if translated_news_page %}{% assign language_switch_path = translated_news_page.url %}{% endif %}
 {% endif %}
 <div class="topbar"><nav class="nav">
