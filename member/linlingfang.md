@@ -37,9 +37,9 @@ links:
 
 林玲芳老师长期从事凝聚态物理与量子材料理论研究，同时积极开展科学传播工作。
 
-目前运营 YouTube 科普动画频道 QuantumCats，面向儿童、青少年及大众观众，通过原创 AI 动画短视频，以轻松、有趣、温暖的方式介绍物理、宇宙与量子科学知识，激发公众对科学探索的兴趣。
+目前运营微信视频号 QuantumCats，面向儿童、青少年及大众观众，通过原创 AI 动画短视频，以轻松、有趣、温暖的方式介绍物理、宇宙与量子科学知识，激发公众对科学探索的兴趣。
 
-<a class="button" href="https://www.youtube.com/channel/UCJb2AG6o_YkzGezN_EDjYIA" target="_blank" rel="noopener">访问 YouTube 频道</a>
+<img class="member-photo channel-qr" src="{{ '/assets/wechat_video.webp' | relative_url }}" alt="微信视频号二维码">
 
 </div>
 
@@ -63,9 +63,9 @@ The group aims to combine interpretable physical mechanisms, advanced computatio
 
 Dr. Lin is also active in science communication.
 
-She runs the YouTube science-animation channel QuantumCats, which introduces physics, the universe, and quantum science to children, teenagers, and general audiences through original AI-assisted animated short videos in a warm and engaging style.
+She runs the WeChat science-animation channel QuantumCats, which introduces physics, the universe, and quantum science to children, teenagers, and general audiences through original AI-assisted animated short videos in a warm and engaging style.
 
-<a class="button" href="https://www.youtube.com/channel/UCJb2AG6o_YkzGezN_EDjYIA" target="_blank" rel="noopener">Visit YouTube channel</a>
+<img class="member-photo channel-qr" src="{{ '/assets/wechat_video.webp' | relative_url }}" alt="WeChat science-animation channel QR code">
 
 </div>
 

@@ -1,6 +1,6 @@
 ---
 group: student
-order: 8
+order: 9
 name:
   zh: 陆瑶 / Yao Lu
   en: Yao Lu / 陆瑶

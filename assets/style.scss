@@ -224,6 +224,7 @@ code { background: #edf5fb; border: 1px solid #d6e7f2; border-radius: 6px; paddi
 .member-list--students { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .member-profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 310px); gap: 24px; align-items: start; }
 .member-photo { width: 100%; border-radius: 24px; border: 1px solid rgba(126,242,255,.24); box-shadow: 0 18px 45px rgba(6,22,41,.22); object-fit: cover; }
+.channel-qr { display: block; width: min(310px, 100%); height: auto; object-fit: contain; }
 .member-card-link { display: block; text-decoration: none; color: inherit; }
 .member-summary-card { display: grid; grid-template-columns: minmax(0, 1fr) 124px; gap: 18px; align-items: center; }
 .member-thumb { width: 124px; height: 150px; object-fit: cover; border-radius: 18px; box-shadow: 0 12px 28px rgba(6,22,41,.18); }
